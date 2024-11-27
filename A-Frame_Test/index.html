@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Meine A-Frame Szene</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <!-- Lichtquelle, die Schatten wirft -->
-      <a-light type="directional" position="2 4 -3" intensity="1" castShadow="true"></a-light>
-      
-      <!-- Texturiertes Objekt -->
-      <a-box position="-2 1.5 -3" rotation="0 45 0" material="src: url(textures/brick_mat.jpg)" shadow="receive: true; cast: true"></a-box>
-      
-      <!-- Einfaches Objekt -->
-      <a-sphere position="2 1.25 -3" radius="1.25" color="#EF2D5E" shadow="receive: true; cast: true"></a-sphere>
-      
-      <!-- Einfaches Objekt -->
-      <a-cylinder position="0 0.75 -5" radius="0.5" height="1.5" color="#FFC65D" shadow="receive: true; cast: true"></a-cylinder>
-      
-      <!-- Einfaches Objekt -->
-      <a-plane position="0 -1 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" shadow="receive: true"></a-plane>
-      
-      <!-- Einfaches Objekt -->
-      <a-torus position="1 1 -2" radius="1" tube="0.2" color="#FF6347" shadow="receive: true; cast: true"></a-torus>
-      
-      <!-- Einfaches Objekt -->
-      <a-cone position="-1 1 -4" radius-bottom="0.5" height="1.5" color="#FF6347" shadow="receive: true; cast: true"></a-cone>
-      
-      <!-- Eingelesenes Objekt -->
-      <a-entity gltf-model="url(fly/scene.gltf)" position="-3 0 -1" shadow="receive: true; cast: true"></a-entity>
+    <a-scene>´  
+      <a-box
+        position="-3 1 -3"
+        rotation="0 45 0"
+        material="src: url(textures/brick_mat.jpg)"
+        shadow="receive: true; cast: true"
+      ></a-box>
+
+      <a-sphere
+        position="2 1.25 -3"
+        radius="1.25"
+        color="#EF2D5E"
+        shadow="receive: true; cast: true"
+      ></a-sphere>
+
+      <a-plane
+        position="0 -1 -4"
+        rotation="-90 0 0"
+        width="100"
+        height="100"
+        color="#7BC8A4"
+        shadow="receive: true, cast: true"
+      ></a-plane>
+
+      <a-torus
+        position="3 2 -1"
+        radius="1"
+        tube="0.2"
+        color="#FF6347"
+        shadow="receive: true; cast: true"
+      ></a-torus>
+
+      <a-cone
+        position="-1 1 -4"
+        radius-bottom="0.5"
+        height="1.5"
+        color="#FF6347"
+        shadow="receive: true; cast: true"
+      ></a-cone>
+
+      <a-entity
+        gltf-model="url(fly/scene.gltf)"
+        position="-2 0 -1"
+        scale="0.2 0.2 0.2"
+        shadow="receive: true; cast: true"
+      ></a-entity>
     </a-scene>
   </body>
 </html>
